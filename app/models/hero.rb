@@ -5,7 +5,7 @@ class Hero
   @@all = []
 
   def initialize(params)
-    params.each{|k,v| self.send("#{k}= #{v}") unless v.is_a?(Array)}
+    params.each{|k,v| self.send(("#{k}="), v) unless v.is_a?(Array)}
     self.class.all << self
   end
 
