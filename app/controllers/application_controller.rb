@@ -14,7 +14,7 @@ class App < Sinatra::Base
       Team.new(params[:team])
       @teams = Team.all
       params[:team][:heroes].each do |hero|
-        Hero.new(hero.each{|k,v| k:v})
+        Hero.new(hero.each{|k,v| k: v}.join(", "))
       end
       @heroes = Hero.all
       erb :team
