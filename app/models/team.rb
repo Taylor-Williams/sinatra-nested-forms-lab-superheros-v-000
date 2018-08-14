@@ -4,7 +4,7 @@ class Team
 
   @@all = []
 
-  def initialize(name: , motto:)
+  def initialize(params)
     @name = name
     @motto = motto
     self.class.all << self
