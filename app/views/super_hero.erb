@@ -1,1 +1,28 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Create Superhero</title>
+  </head>
+  <body>
+    <h1>Create a Team and Heroes!</h1>
+    <form class="super_hero_submission" action="/teams" method="post">
+      
+      <label for="team_name">Team Name:</label>
+      <input type="text" name="team[name]" id="team_name">
+      <label for="team_motto">Team Motto:</label>
+      <input type="text" name="team[motto]" id="team_motto">
 
+      <% 3.times do |i| %>
+        <h3>Hero <%=i%></h3>
+        <label for="hero_<%=i%>_name">Hero's Name:</label>
+        <input type="text" name="team[heroes][][name]" id="hero_<%=i%>_name">
+        <label for="hero_<%=i%>_power">Hero's Power:</label>
+        <input type="text" name="team[heroes][][power]" id="hero_<%=i%>_power">
+        <label for="hero_<%=i%>_bio">Hero's Biography:</label>
+        <input type="text" name="team[heroes][][bio]" id="hero_<%=i%>_bio">
+      <%end%>
+      
+    </form>
+  </body>
+</html>
