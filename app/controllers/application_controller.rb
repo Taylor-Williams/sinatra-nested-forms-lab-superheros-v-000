@@ -11,6 +11,7 @@ class App < Sinatra::Base
     end
 
     post '/teams' do
+      puts params[:team].map{|k,v| "#{k}: #{v}"}.join(", ")
       Team.new(params[:team].map{|k,v| "#{k}: #{v}"}.join(", "))
       @teams = Team.all
       params[:team][:heroes].each do |hero|
