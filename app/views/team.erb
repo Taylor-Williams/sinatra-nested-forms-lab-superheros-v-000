@@ -1,9 +1,9 @@
 <h1><%=@teams%></h1>
 <br>
 <%@heroes.each_with_index do |hero, index|%>
-<h3>Hero <%=index+1%>:</h3>
-<p>name: <%=hero.name%></p>
-<p>power: <%=hero.power%></p>
-<p>bio: <%=hero.bio%></p>
-<br>
+  <h3>Hero <%=index+1%>:</h3>
+  <p>name: <%=hero.name%></p>
+  <p>power: <%=hero.power%></p>
+  <p>bio: <%=hero.bio%></p>
+  <br>
 <%end%>
