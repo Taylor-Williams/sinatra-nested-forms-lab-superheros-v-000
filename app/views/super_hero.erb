@@ -13,7 +13,7 @@
       <label for="team_motto">Team Motto:</label>
       <input type="text" name="team[motto]" id="team_motto">
 
-      <% 3.times do |i| %>
+      <% 3.times do |i + 1| %>
         <h3>Hero <%=i%></h3>
         <label for="member<%=i%>_name">Hero's Name:</label>
         <input type="text" name="team[heroes][][name]" id="member<%=i%>_name">
