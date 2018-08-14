@@ -5,9 +5,7 @@ class Hero
   @@all = []
 
   def initialize(params)
-    @name = name
-    @power = power
-    @bio = bio
+    params.each do {|k,v| self.send("#{k}= #{v}")unless v.is_a?(Array)}
     self.class.all << self
   end
 
