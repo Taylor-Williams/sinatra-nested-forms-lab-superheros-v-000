@@ -14,13 +14,13 @@
       <input type="text" name="team[motto]" id="team_motto">
 
       <% 3.times do |i| %>
-        <h3>Hero <%=i%></h3>
-        <label for="member<%=i%>_name">Hero's Name:</label>
-        <input type="text" name="team[heroes][][name]" id="member<%=i%>_name">
-        <label for="member<%=i%>_power">Hero's Power:</label>
-        <input type="text" name="team[heroes][][power]" id="member<%=i%>_power">
-        <label for="member<%=i%>_bio">Hero's Biography:</label>
-        <input type="text" name="team[heroes][][bio]" id="member<%=i%>_bio">
+        <h3>Hero <%=i+1%></h3>
+        <label for="member<%=i+1%>_name">Hero's Name:</label>
+        <input type="text" name="team[heroes][][name]" id="member<%=i+1%>_name">
+        <label for="member<%=i+1%>_power">Hero's Power:</label>
+        <input type="text" name="team[heroes][][power]" id="member<%=i+1%>_power">
+        <label for="member<%=i+1%>_bio">Hero's Biography:</label>
+        <input type="text" name="team[heroes][][bio]" id="member<%=i+1%>_bio">
       <%end%>
 
       <input type="submit" id="Submit">
